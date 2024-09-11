@@ -6,10 +6,7 @@ import { useLocalStorageSync } from '../useLocalStorageSync';
 
 const FavoriteImages=()=> {
   useLocalStorageSync()
-  const {favorites} = useSelector(({favorites}: RootState) => {
-    console.log('favorites',favorites)
-    return favorites});
-  console.log('favorites 2',favorites)
+  const {favorites} = useSelector(({favorites}: RootState) => favorites);
   return (
     <div>
       <Button variant="contained" href={'/'} className='absolute top-8 left-8'>&lt; Back</Button>
